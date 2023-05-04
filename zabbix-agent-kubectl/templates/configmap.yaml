@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: zabbix-agent-configmap
+data:
+{{- $files := .Files.Glob "files/*" }}
+{{- range $file, $bytes := $files }}
+  {{ base $file }}: |-
+    {{ $bytes | toString | nindent 4 }}
+{{- end }}
+  user-parameter.conf: |- 
+{{- range $file, $bytes := $files }}
+    UserParameter=discovery.{{ (split "." (base $file))._0 }}[*],/etc/zabbix/scripts/{{ base $file }} $1 $2
+{{- end }}
