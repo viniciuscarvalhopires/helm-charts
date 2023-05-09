@@ -1,9 +1,0 @@
-apiVersion: v2
-name: zabbix-agent-kubectl
-description: Helm chart contendo zabbix agent customizado para monitoramento de kubernetes
-
-type: application
-
-version: 0.1.0
-icon: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6gxe_2S9S7GcF1yJj7x9tZK83SOX_-22ETw&usqp=CAU
-appVersion: "1.0.0"
