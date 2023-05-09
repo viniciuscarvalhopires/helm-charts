@@ -1,33 +1,49 @@
 rancher_min_version: 2.3.0
 categories:
 - Monitoring
-- application
 questions:
 - variable: ZBX_HOSTNAME
   default: zabbix-agent-kubectl
   description: "Digite o nome do host do agente do Zabbix:"
+  type: string
+  label: "Nome do host do agente do Zabbix"
 - variable: ZBX_SERVER_HOST
   default: zabbix-server
   description: "Digite o endereço do servidor Zabbix:"
+  type: string
+  label: "Endereço do servidor Zabbix"
 - variable: ZBX_SERVER_PORT
   default: 10051
   description: "Digite a porta do servidor Zabbix:"
+  type: string
+  label: "Porta do servidor Zabbix"
 - variable: ZBX_PASSIVESERVERS
   default: 10.42.0.0/16,10.128.0.0/16
   description: "Digite a lista de sub-redes permitidas para conexões passivas (separadas por vírgulas):"
+  type: string
+  label: "Lista de sub-redes permitidas para conexões passivas"
 - variable: ZBX_ACTIVESERVERS
   default: zabbix-server
   description: "Digite o nome do servidor Zabbix para conexões ativas:"
+  type: string
+  label: "Nome do servidor Zabbix para conexões ativas"
 - variable: ZBX_LISTENIP
   default: 0.0.0.0
   description: "Digite o endereço IP que o agente Zabbix deve ouvir (0.0.0.0 para todos os IPs):"
+  type: string
 - variable: ZBX_UNSAFEUSERPARAMETERS
   default: 1
   description: "Digite 1 para permitir o uso de parâmetros de usuário inseguros (0 para desativar):"
+  type: string
+  label: "Permitir o uso de parâmetros de usuário inseguros"
 - variable: ZBX_TIMEOUT
   default: 30
   description: "Digite o tempo limite em segundos para as conexões do agente Zabbix:"
+  type: string
+  label: "Tempo limite em segundos para as conexões do agente Zabbix"
 - variable: ZBX_ALLOWKEY
   default: system.run[*]
   description: "Digite a chave do item Zabbix que permite o uso de parâmetros de usuário:"
+  type: string
+  label: "Chave do item Zabbix que permite o uso de parâmetros de usuário"
 
